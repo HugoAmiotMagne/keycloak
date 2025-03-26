@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="mb-4">Liste des Fruits</h1>
+    <div class="list-group">
+        {% for fruit in fruits %}
+            <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">{{ fruit.nom }}</h5>
+                <p class="mb-1">{{ fruit.description }}</p>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
